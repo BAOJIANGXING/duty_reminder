@@ -33,8 +33,8 @@ python3 main.py
 
 2、使用dist中可执行文件运行
 ```bash
-chmod +x mysqlbackup 
-./mysqlbackup
+chmod +x duty_reminder 
+./duty_reminder
 ```
 
 定时执行
