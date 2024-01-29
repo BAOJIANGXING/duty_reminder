@@ -40,10 +40,10 @@ if __name__ == "__main__":
                 您好！根据公司安排，您将于今日【{}】在【{}】进行值班工作。请您务必准时到岗，认真履行职责，确保公司信息系统的稳定运行。""" \
                         .format(config.get(section, 'team'), str(get_duty_person(section, 0)), str(current_date),
                                 config.get(section, 'duty_period'))
-                    wechat = WeCom()
-                    wechat.send_messages(data)
                 else:
                     data = """叮~您好！明天您【{}】有值班任务，请准时到岗，确保公司信息系统的稳定运行。""" \
                         .format(str(get_duty_person(section, 1)))
+                wechat = WeCom()
+                wechat.send_messages(data)
     except Exception as e:
         logger.exception("发送出现异常：%s", str(e))

@@ -17,7 +17,7 @@ def get_config_file():
 
 
 def print_version():
-    print("当前版本：1.0.0 ")
+    print("当前版本：v1.0.1 修复夜间提醒；  ")
 
 
 parser = argparse.ArgumentParser(description='备份程序')
